@@ -1,15 +1,11 @@
-# Make Art
+# Elements editor
 
-> An app for learning programming using a basic CoffeeScript drawing API
-
-![Screenshot of the App](make-art-screenshot.png)
-
-You can try the app [here »](http://art.kano.me/)
+A three-dee making tool with simple commands and powerups for everyone. Built with THREE.js, JavaScript, and <3. Built on Draw With Code/Make Art by [Tancredi Trugenberger](https://github.com/tancredi) and [Kano Computing](https://github.com/KanoComputing).
 
 ## Setup
 
-    git clone git@github.com:KanoComputing/make-art.git
-    cd make-art
+    git clone git@github.com:alecmolloy/elements.git
+    cd elements
     npm install
 
 ## Build
