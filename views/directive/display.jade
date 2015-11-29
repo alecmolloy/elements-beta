@@ -7,8 +7,6 @@
             ng-mouseleave='displayCoordsPos()'
             )
 
-        .cursor(ng-style='{ left: cursorPosition.x + "px", top: cursorPosition.y + "px" }')
-
         .error-display(ng-if='error', ng-class='"error-" + error.type')
 
             h3
@@ -17,10 +15,6 @@
 
             p {{ error.text || 0 }}
 
-        .toolbar
-            .position-indicator
-                i(ng-class="{'icon-mouse-pointer': mouse, 'icon-plus': !mouse}")
-                |  x: {{ coordsPosition.x }} y: {{ coordsPosition.y }}
 
     .actions
 
