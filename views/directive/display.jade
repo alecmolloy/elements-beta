@@ -2,10 +2,7 @@
 
     .display: .padded: .inner
 
-        canvas(
-            ng-mousemove='displayMousePos($event)',
-            ng-mouseleave='displayCoordsPos()'
-            )
+        canvas
 
         .error-display(ng-if='error', ng-class='"error-" + error.type')
 
