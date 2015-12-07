@@ -3,7 +3,7 @@ html(lang='en',  xmlns:ng="http://angularjs.org")
     head
         //- Generic
         meta(charset='UTF-8')
-        link(rel="shortcut icon", href="/favicon.ico", type="image/x-icon")
+        link(rel="shortcut icon", href="/favicon.png", type="image/x-icon")
 
         //- Mobile options
         meta(name='apple-mobile-web-app-capable', content='yes')
@@ -18,7 +18,7 @@ html(lang='en',  xmlns:ng="http://angularjs.org")
                     return new window.ActiveXObject("Microsoft.XMLHTTP");
                 });
             })();
-        title Draw
+        title Elements 3D
 
     body(id="ng-app", ng-app='draw', class=offline ? 'offline' : 'online')
         script(src='/js/vendor/console-polyfill.js', type='text/javascript')
