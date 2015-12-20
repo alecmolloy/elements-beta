@@ -42,6 +42,18 @@ body.full-screen-editor
     .controls
         position fixed
 
+body.full-screen-display
+	.draw-display .inner
+        position fixed
+        left 0
+        top 0
+        z-index 10
+        width 100%
+        height 100%
+		background-color black
+	.draw-display canvas
+		border-radius 0
+
 editor
     display block
     height 100%
