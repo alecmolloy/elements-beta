@@ -1,325 +1,37 @@
 [
-    {
-        "label"    : "Polyhedra",
-        "icon"     : "shapes",
-        "commands" : [
-            {
-                "call"        : "box",
-                "description" : "Draws a box",
-                "args"        : [
-                    [ "width", "number", "The width of the box.", true ],
-                    [ "height", "number", "The height of the box. If left empty, it defaults to the width.", false ],
-                    [ "depth", "number", "The depth of the box. If left empty, it defaults to the width.", false ]
-                ],
-                "defaults": [ 10, 10, 10 ]
-            },
-            {
-                "call"        : "cube",
-                "description" : "Draw a cube",
-                "args"        : [
-                    [ "size", "number", "The length of all edges in the cube.", true ],
-                ],
-                "defaults": [ 10 ]
-            },
-            {
-                "call"        : "cylinder",
-                "description" : "Draw a cylinder",
-                "args"        : [
-                    [ "radius", "number", "The radius of the cylinder. Accepts either a number, or object with top and bottom radii specified.", true ],
-                    [ "height", "number", "The height of the cylinder", true ],
-                    [ "openEnded", "boolean", "Whether the cylinder is open-ended. Takes a single boolean value, or an array of two boolean values", false ]
-                ],
-                "defaults": [ 10, 20, false ]
-            },
-            {
-                "call"        : "icosahedron",
-                "description" : "Draw an icosahedron",
-                "args"        : [
-                    [ "radius", "number", "The radius of the icosahedron.", true ]
-                ],
-                "defaults": [ 10 ]
-            },
-            {
-                "call"        : "dodecahedron",
-                "description" : "Draw a dodecahedron",
-                "args"        : [
-                    [ "radius", "number", "The radius of the dodecahedron.", true ]
-                ],
-                "defaults": [ 10 ]
-            },
-            {
-                "call"        : "octahedron",
-                "description" : "Draw a octahedron",
-                "args"        : [
-                    [ "radius", "number", "The radius of the octahedron.", true ]
-                ],
-                "defaults": [ 10 ]
-            },
-            {
-                "call"        : "plane",
-                "description" : "Draw a flat plane",
-                "args"        : [
-                    [ "width", "number", "The width of the plane.", true ],
-                    [ "height", "number", "The height of the plane. If left empty, defaults to width.", true ]
-                ],
-                "defaults": [ 10 ]
-            },
-            {
-                "call"        : "ring",
-                "description" : "Draw a flat 2D ring.",
-                "args"        : [
-                    [ "innerRadius", "number", "The inner radius of the ring.", true ],
-                    [ "outerRadius", "number", "The outer radius of the ring.", true ],
-                    [ "thetaSegments", "number", "The number of segments going around the ring.", false ],
-                    [ "phiSegments", "number", "The number of segments going from the inside to the outside of the ring.", false ],
-                    [ "thetaStart", "number", "The origin for the segments going around the ring.", false ],
-                    [ "thetaLength", "number", "The length of the arc going around the the ring.", false ]
-                ],
-                "defaults": [ 5, 10, 12, 12, 0, Math.PI * 2 ]
-            },
-            {
-                "call"        : "sphere",
-                "description" : "Draw a sphere.",
-                "args"        : [
-                    [ "radius", "number", "The radius of the sphere.", true ],
-                    [ "widthSegments", "number", "The number of segments going around the sphere.", false ],
-                    [ "heightSegments", "number", "The number of segments going from the top to the bottom of the sphere.", false ],
-                    [ "phiStart", "number", "The origin for the segments going around the sphere.", false ],
-                    [ "phiLength", "number", "The length of the arc going around the the sphere.", false ],
-                    [ "thetaStart", "number", "The origin for the segments going .", false ],
-                    [ "thetaLength", "number", "The length of the arc going around the the ring.", false ]
-                ],
-                "defaults": [ 10, 12, 12, 0, Math.PI * 2, 0, Math.PI ]
-            },
-            {
-                "call"        : "tetrahedron",
-                "description" : "Draw a tetrahedron",
-                "args"        : [
-                    [ "radius", "number", "The radius of the tetrahedron.", true ]
-                ],
-                "defaults": [ 10 ]
-            },
-            {
-                "call"        : "torus",
-                "description" : "Draw a torus",
-                "args"        : [
-                    [ "radius", "number", "The radius of the tetrahedron.", true ],
-                    [ "tube", "number", "The radius of the tetrahedron.", true ],
-                    [ "radialSegments", "number", "The radius of the tetrahedron.", true ],
-                    [ "tubularSegments", "number", "The radius of the tetrahedron.", true ],
-                    [ "arc", "number", "The radius of the tetrahedron.", true ]
-                ],
-                "defaults": [ 10 ]
-            },
-            {
-                "call"        : "torusKnot",
-                "description" : "Draw a torus knot",
-                "args"        : [
-                    [ "radius", "number", "The radius of the torus knot.", true ],
-                    [ "tubeRadius", "number", "The radius of the tube.", true ],
-                    [ "p", "number", "The number of times the knot winds around a circle in the interior of the torus.", true ],
-                    [ "q", "number", "The number of times the know winds around its axis of rotational symmetry.", true ],
-                    [ "radialSegments", "number", "The number of segments running along the length of the torus knot.", true ],
-                    [ "tubularSegments", "number", "The number of segments running around the tube of the torus knot.", true ],
-                    [ "heightScale", "number", "The radius of the tetrahedron.", true ]
-                ],
-                "defaults": [ 10 ]
-            },
+  {
+    "label": "Polyhedra",
+    "icon": "shapes",
+    "commands": [
+      {
+        "call": "box",
+        "description": "Draws a box",
+        "args": [
+          [
+            "width",
+            "number",
+            "The width of the box.",
+            true
+          ],
+          [
+            "height",
+            "number",
+            "The height of the box. If left empty, it defaults to the width.",
+            false
+          ],
+          [
+            "depth",
+            "number",
+            "The depth of the box. If left empty, it defaults to the width.",
+            false
+          ]
+        ],
+        "defaults": [
+          10,
+          10,
+          10
         ]
-    },
-    {
-        "label"    : "Lines",
-        "icon"     : "lines",
-        "commands" : [
-            {
-                "call"        : "line",
-                "description" : "Draws a capsule line of a certain size",
-                "args"        : [
-                    [ "x", "number", "The x-axis distance", true ],
-                    [ "y", "number", "The y-axis distance", false ],
-                    [ "z", "number", "The z-axis distance", false ]
-                ],
-                "defaults": [ 100, 50 ]
-            },
-            {
-                "call"        : "lineTo",
-                "description" : "Draw a capsule line to a certain point",
-                "args"        : [
-                    [ "x", "number", "The x-axis destination", true ],
-                    [ "y", "number", "The y-axis destination", true ],
-                    [ "y", "number", "The z-axis destination", true ]
-                ],
-                "defaults": [ 0, 0 ]
-            }
-        ]
-    },
-    {
-        "label"    : "Position",
-        "icon"     : "position",
-        "commands" : [
-            {
-                "call"        : "move",
-                "description" : "Move the cursor a certain distance away",
-                "args"        : [
-                    [ "x", "number", "The x-axis distance", true ],
-                    [ "y", "number", "The y-axis distance", false ],
-                    [ "z", "number", "The z-axis distance", false ]
-                ],
-                "defaults": [ 100, 50 ]
-            },
-            {
-                "call"        : "moveTo",
-                "description" : "Move the cursor to a particular position",
-                "args"        : [
-                    [ "x", "number", "The x-axis destination", true ],
-                    [ "y", "number", "The y-axis destination", true ],
-                    [ "z", "number", "The z-axis destination", true ]
-                ],
-                "defaults": [ "center", "center" ]
-            }
-        ]
-    },
-    {
-        "label"    : "General",
-        "icon"     : "general",
-        "commands" : [
-            {
-                "call"        : "for",
-                "description" : "Repeat code",
-                "args"        : [
-                    [ "i in [x..y]", "number", "The start and end point for the variable i", true ]
-                ],
-                "example"     : "for i in [1..5]\n    circle i",
-                "defaults": null
-            },
-            {
-                "call"        : "random",
-                "description" : "Get a random decimal number between 0 and 1.",
-                "example"     : "random 5, 10",
-                "defaults": [ 5, 10 ]
-            }
-        ]
-    },
-    {
-        "label"    : "Colors",
-        "icon"     : "colors",
-        "commands" : [
-            {
-                "call"        : "background",
-                "description" : "Set the background color",
-                "args"        : [
-                    [ "color", "string", "The background color to set", true ]
-                ],
-                "defaults": [ "blue" ]
-            },
-            {
-                "call"        : "color",
-                "description" : "Change the color in use",
-                "args"        : [
-                    [ "color", "string", "The object color to set", true ]
-                ],
-                "defaults": [ "red" ]
-            },
-            {
-                "call"        : "stroke",
-                "description" : "Change the width and color of the stroke (border)",
-                "args"        : [
-                    [ "color", "string", "A string with the color to use - E.g. 'red', 'blue'..", false ],
-                    [ "size", "number", "(number) The width to use", false ]
-                ],
-                "defaults": [ 10, "purple" ]
-            },
-            {
-                "call"        : "light",
-                "description" : "Set a colour's brightness",
-                "args"        : [
-                    [ "color", "string", "Color", true ],
-                    [ "position", "array", "Array of coordinates: [x, y, z]", false ],
-                    [ "intensity", "number", "Numeric value of the light's strength/intensity from 0.0 to 1.0", false ],
-                    [ "distance", "number", "The distance of the light where the intensity is 0. When distance is 0, then the distance is endless.", false ],
-                    [ "decay", "number", "The amount the light dims along the distance of the light.", false ]
-                ],
-                "defaults": [ "on" ]
-            },
-            {
-                "call"        : "ambient",
-                "description" : "Set an ambient colour that affects all meshes evenly",
-                "args"        : [
-                    [ "color", "string", "Color", true ],
-                ],
-                "defaults": [ "high" ]
-            },
-            {
-                "call"        : "directional",
-                "description" : "Creates a light that shines from a specific direction not from a specific position. This light will behave as though it is infinitely far away and the rays produced from it are all parallel. The best analogy would be a light source that acts like the sun: the sun is so far away that all sunlight hitting objects comes from the same angle.",
-                "args"        : [
-                    [ "color", "string", "Color", true ],
-                    [ "position", "array", "Array of coordinates: [x, y, z]", false ],
-                    [ "intensity", "number", "Numeric value of the light's strength/intensity from 0.0 to 1.0", false ]
-                ],
-                "defaults": [ "on" ]
-            },
-            {
-                "call"        : "hemisphere",
-                "description" : "Creates a light source that shines skyColor from above, and groundColor from below.",
-                "args"        : [
-                    [ "skyColor", "string", "Color", true ],
-                    [ "groundColor", "string", "Color", true ],
-                    [ "color", "string", "Color", true ],
-                    [ "intensity", "number", "Numeric value of the light's strength/intensity from 0.0 to 1.0", false ]
-                ],
-                "defaults": [ "high", 'low' ]
-            },
-            {
-                "call"        : "spot",
-                "description" : "Creates a spotlight that shines an angle amount.",
-                "args"        : [
-                    [ "color", "string", "Color", true ],
-                    [ "position", "array", "Array of coordinates: [x, y, z]", false ],
-                    [ "intensity", "number", "Numeric value of the light's strength/intensity from 0.0 to 1.0", false ],
-                    [ "angle", "number", "The angle of the light opening.", false ],
-                    [ "distance", "number", "The distance of the light where the intensity is 0. When distance is 0, then the distance is endless.", false ],
-                    [ "decay", "number", "The amount the light dims along the distance of the light.", false ]
-                ],
-                "defaults": [ "high", [100, 100, 100], 1.0, 10 * Math.PI / 180 ]
-            },
-            {
-                "call"        : "setBrightness",
-                "description" : "Set a colour's brightness",
-                "args"        : [
-                    [ "color", "string", "Color", true ],
-                    [ "amount", "number", "amount of brightness to set (-100 to 100)", false ]
-                ],
-                "defaults": [ "yellow", 30 ]
-            },
-            {
-                "call"        : "setSaturation",
-                "description" : "Set a colour's saturation",
-                "args"        : [
-                    [ "color", "string", "Color", true ],
-                    [ "amount", "number", "amount of saturation to set (-100 to 100)", false ]
-                ],
-                "defaults": [ "grey", 30 ]
-            },
-            {
-                "call"        : "rotate",
-                "description" : "Rotate a color's hue angle by given amount",
-                "args"        : [
-                    [ "color", "string", "Color to rotate", true ],
-                    [ "amount", "number", "angle to rotate (-360 - 360)", true ]
-                ],
-                "defaults": [ "red", 100 ]
-            },
-            {
-                "call"        : "setTransparency",
-                "description" : "Set how see through a color is",
-                "args"        : [
-                    [ "color", "string", "Color to saturate", true ],
-                    [ "amount", "number", "amount of opacity to subtract (-100 to 100)", true ]
-                ],
-                "defaults": [ "black", 50 ]
-            }
-
-        ]
-    }
+      }
+	]
+  }
 ]
