@@ -230,6 +230,60 @@
                 "defaults": [ 10, "purple" ]
             },
             {
+                "call"        : "light",
+                "description" : "Set a colour's brightness",
+                "args"        : [
+                    [ "color", "string", "Color", true ],
+                    [ "position", "array", "Array of coordinates: [x, y, z]", false ],
+                    [ "intensity", "number", "Numeric value of the light's strength/intensity from 0.0 to 1.0", false ],
+                    [ "distance", "number", "The distance of the light where the intensity is 0. When distance is 0, then the distance is endless.", false ],
+                    [ "decay", "number", "The amount the light dims along the distance of the light.", false ]
+                ],
+                "defaults": [ "on" ]
+            },
+            {
+                "call"        : "ambient",
+                "description" : "Set an ambient colour that affects all meshes evenly",
+                "args"        : [
+                    [ "color", "string", "Color", true ],
+                ],
+                "defaults": [ "high" ]
+            },
+            {
+                "call"        : "directional",
+                "description" : "Creates a light that shines from a specific direction not from a specific position. This light will behave as though it is infinitely far away and the rays produced from it are all parallel. The best analogy would be a light source that acts like the sun: the sun is so far away that all sunlight hitting objects comes from the same angle.",
+                "args"        : [
+                    [ "color", "string", "Color", true ],
+                    [ "position", "array", "Array of coordinates: [x, y, z]", false ],
+                    [ "intensity", "number", "Numeric value of the light's strength/intensity from 0.0 to 1.0", false ]
+                ],
+                "defaults": [ "on" ]
+            },
+            {
+                "call"        : "hemisphere",
+                "description" : "Creates a light source that shines skyColor from above, and groundColor from below.",
+                "args"        : [
+                    [ "skyColor", "string", "Color", true ],
+                    [ "groundColor", "string", "Color", true ],
+                    [ "color", "string", "Color", true ],
+                    [ "intensity", "number", "Numeric value of the light's strength/intensity from 0.0 to 1.0", false ]
+                ],
+                "defaults": [ "high", 'low' ]
+            },
+            {
+                "call"        : "spot",
+                "description" : "Creates a spotlight that shines an angle amount.",
+                "args"        : [
+                    [ "color", "string", "Color", true ],
+                    [ "position", "array", "Array of coordinates: [x, y, z]", false ],
+                    [ "intensity", "number", "Numeric value of the light's strength/intensity from 0.0 to 1.0", false ],
+                    [ "angle", "number", "The angle of the light opening.", false ],
+                    [ "distance", "number", "The distance of the light where the intensity is 0. When distance is 0, then the distance is endless.", false ],
+                    [ "decay", "number", "The amount the light dims along the distance of the light.", false ]
+                ],
+                "defaults": [ "high", [100, 100, 100], 1.0, 10 * Math.PI / 180 ]
+            },
+            {
                 "call"        : "setBrightness",
                 "description" : "Set a colour's brightness",
                 "args"        : [
