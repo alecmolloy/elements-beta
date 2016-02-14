@@ -1,0 +1,5 @@
+{
+    "frontsided"			: 0,
+    "backsided"				: 1,
+    "doublesided"			: 2
+}
